@@ -1,0 +1,49 @@
+@import "@/styles/variables";
+@import "@/styles/variables";
+
+%link-style {
+  display: inline-block;
+  padding: 15px 10px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1px;
+}
+
+.header {
+  background-color: getColor("BlackColor");
+
+  & .header-container {
+    padding: 15px 80px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    height: 50px;
+    width: 50px;
+    margin-right: 60px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+
+    & .list__item {
+
+      & .default-link {
+        @extend %link-style;
+        transition: color 300ms linear;
+
+        &:hover {
+          color: getColor("LightTextHover");
+        }
+      }
+
+      & .active-link {
+        @extend %link-style;
+        color: getColor("LightTextActive");
+      }
+    }
+  }
+}
