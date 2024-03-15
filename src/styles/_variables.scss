@@ -1,0 +1,12 @@
+$colors: (
+  "LightTextDefault": #DBDCDE,
+  "LightTextHover": #F7C672,
+  "LightTextActive": #E59F2E,
+  "BlackColorTop": #1F2428,
+  "DarkBackground": #242323,
+  "BlackColorBottom": #24292E,
+);
+
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
