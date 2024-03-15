@@ -1,5 +1,5 @@
-@import "@/styles/variables";
-@import "@/styles/variables";
+@import "./../../styles/_variables.scss";
+@import "./../../styles/_mixins.scss";
 
 %link-style {
   display: inline-block;
@@ -11,7 +11,8 @@
 }
 
 .header {
-  background-color: getColor("BlackColor");
+  background-color: getColor("BlackColorTop");
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 
   & .header-container {
     padding: 15px 80px;
@@ -28,21 +29,51 @@
   &__list {
     display: flex;
     align-items: center;
+    gap: 20px;
 
     & .list__item {
 
       & .default-link {
         @extend %link-style;
-        transition: color 300ms linear;
+        position: relative;
+        transition: all 300ms linear;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 2px;
+          background-color: getColor("LightTextHover");
+          top: 49px;
+          left: 0;
+          opacity: 0;
+          transition: all 400ms ease-in-out;
+        }
 
         &:hover {
           color: getColor("LightTextHover");
+
+          &::before {
+            width: 100%;
+            opacity: 1;
+          }
         }
       }
 
       & .active-link {
         @extend %link-style;
+        position: relative;
         color: getColor("LightTextActive");
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background-color: getColor("LightTextActive");
+          top: 49px;
+          left: 0;
+        }
       }
     }
   }

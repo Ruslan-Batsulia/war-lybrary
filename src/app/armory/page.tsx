@@ -1,5 +1,5 @@
-import { Armory } from "@/components";
+import { ArmoryPage } from "@/components";
 
-export default function ArmoryPage() {
-  return <Armory />
+export default function Armory() {
+  return <ArmoryPage />
 }

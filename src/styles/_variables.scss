@@ -1,9 +1,10 @@
 $colors: (
   "LightTextDefault": #DBDCDE,
-  "LightTextHover": #FCBA4C,
+  "LightTextHover": #F7C672,
   "LightTextActive": #E59F2E,
-  "BlackColor": #000000,
+  "BlackColorTop": #1F2428,
   "DarkBackground": #242323,
+  "BlackColorBottom": #24292E,
 );
 
 @function getColor($key) {

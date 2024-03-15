@@ -7,9 +7,20 @@
   margin: 0;
 }
 
-body {
+html, body {
   background-color: getColor("DarkBackground");
   color: getColor("LightTextDefault");
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  & main {
+    flex: 1;
+  }
+
+  & footer {
+    flex-shrink: 0;
+  }
 }
 
 a {
