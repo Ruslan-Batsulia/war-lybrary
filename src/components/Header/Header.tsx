@@ -11,7 +11,7 @@ export default function Header() {
   
   return (
     <header className="header">
-      <div className="container header-container">
+      <div className="container header__container">
         <Link href="/" className="header__icon">
           <Image src={library} alt="library icon" height={50} />
         </Link>
