@@ -16,6 +16,7 @@ const navLink: NavLinkType[] = [
   { pathPage: "/armory", title: "Зброярня", id: 1, },
   { pathPage: "/missions", title: "Місії", id: 2, },
   { pathPage: "/achievements", title: "Досягнення", id: 3, },
+  { pathPage: "/season", title: "Сезон", id: 4, },
 ];
 
 export default function Header() {
