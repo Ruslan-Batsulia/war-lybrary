@@ -6,6 +6,18 @@ import { usePathname } from "next/navigation";
 import library from "@/../public/icon/library.svg";
 import "./Header.scss";
 
+type NavLinkType = {
+  pathPage: string;
+  title: string;
+  id: number;
+};
+
+const navLink: NavLinkType[] = [
+  { pathPage: "/armory", title: "Зброярня", id: 1, },
+  { pathPage: "/missions", title: "Місії", id: 2, },
+  { pathPage: "/achievements", title: "Досягнення", id: 3, },
+];
+
 export default function Header() {
   const path = usePathname();
   
@@ -17,14 +29,22 @@ export default function Header() {
         </Link>
 
         <ul className="header__list">
-          <li className="list__item">
-            <Link href="/armory" className={`${path === "/armory" ? "active-link" : "default-link"}`}>Зброярня</Link>
-          </li>
-          <li className="list__item">
-            <Link href="/missions" className={`${path === "/missions" ? "active-link" : "default-link"}`}>Місії</Link>
-          </li>
+          {
+            navLink.map((e) => {
+              return (
+                <li key={e.id} className="list__item">
+                  <Link href={e.pathPage} className={`${
+                    path === e.pathPage ?
+                    "active-link" : "default-link"
+                  }`}>
+                    {e.title}
+                  </Link>
+                </li>
+              )
+            })
+          }
         </ul>
       </div>
     </header>
-  )
+  );
 }

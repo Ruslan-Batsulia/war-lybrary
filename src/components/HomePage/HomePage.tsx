@@ -4,7 +4,9 @@ export default function HomePage() {
   return(
     <div className="home-page">
       <div className="container home-page__container">
-        <h1>WELCOME</h1>
+        <p className="home-page__first-line">WELCOME</p>
+        <p className="home-page__second-line">to the club</p>
+        <p className="home-page__thrid-line">BUDDY</p>
       </div>
     </div>
   );
