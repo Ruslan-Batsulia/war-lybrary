@@ -6,12 +6,18 @@
   box-shadow: 0 0 10px rgba(Black, 0.5);
 
   &__container.container {
-    padding: 15px 80px;
+    position: relative;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 15px 80px;
 
     @include onlyTablet {
-      padding: 15px 50px;
+      padding: 15px 48px;
+    }
+
+    @include onlyMobile {
+      padding: 10px 16px;
     }
   }
 
@@ -37,86 +43,36 @@
     }
   }
 
-  &__list {
+  &__local {
+    height: 50px;
+    width: 50px;
+
+    margin-left: 60px;
+
+    @include onlyTablet {
+      height: 40px;
+      width: 40px;
+
+      margin-left: 40px;
+    }
+  }
+
+  & .burger-menu-button {
+    position: relative;
+
     display: flex;
     align-items: center;
-    gap: 20px;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
 
-    width: 100%;
+    border-color: transparent;
+    background-color: transparent;
 
-    & .list__item {
-      & .default-link {
-        display: inline-block;
-        position: relative;
-        padding: 15px 10px;
-
-        font-size: 25px;
-        transition: all 300ms linear;
-        cursor: default;
-
-        @include onlyTablet {
-          font-size: 20px;
-        }
-
-        &::before {
-          content: "";
-          position: absolute;
-
-          width: 0;
-          height: 2px;
-          top: 49px;
-          left: 0;
-
-          opacity: 0;
-          background-color: getColor(LightTextHover);
-          transition: all 400ms ease-in-out;
-
-          @include onlyTablet {
-            top: 43px;
-          }
-        }
-
-        @include desktop {
-          &:hover {
-            color: getColor(LightTextHover);
-  
-            &::before {
-              width: 100%;
-              opacity: 1;
-            }
-          }
-        }
-      }
-
-      & .active-link {
-        display: inline-block;
-        position: relative;
-        padding: 15px 10px;
-
-        font-size: 25px;
-        color: getColor(LightTextActive);
-        cursor: default;
-
-        @include onlyTablet {
-          font-size: 20px;
-        }
-
-        &::before {
-          content: "";
-          position: absolute;
-
-          width: 100%;
-          height: 2px;
-          top: 49px;
-          left: 0;
-
-          background-color: getColor(LightTextActive);
-
-          @include onlyTablet {
-            top: 43px;
-          }
-        }
-      }
+    @include tablet {
+      display: none;
     }
+
+    z-index: 20;
   }
 }
