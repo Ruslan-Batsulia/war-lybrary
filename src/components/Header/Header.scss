@@ -1,26 +1,47 @@
-@import "./../../styles/_variables.scss";
-@import "./../../styles/_mixins.scss";
+@import "@/sass/_variables.scss";
+@import "@/sass/_mixins.scss";
 
 %link-style {
   display: inline-block;
   padding: 15px 10px;
   font-size: 25px;
+
+  @include onlyTablet {
+    font-size: 20px;
+  }
 }
 
 .header {
   background-color: getColor("BlackColorTop");
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 
-  &__container {
+  &__container.container {
     padding: 15px 80px;
     display: flex;
     align-items: center;
+
+    @include onlyTablet {
+      padding: 15px 50px;
+    }
   }
 
   &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 50px;
     width: 50px;
     margin-right: 60px;
+
+    @include onlyTablet {
+      height: 40px;
+      width: 40px;
+      margin-right: 40px;
+    }
+
+    & img {
+      height: 100%;
+    }
   }
 
   &__list {
@@ -33,7 +54,7 @@
         @extend %link-style;
         position: relative;
         transition: all 300ms linear;
-        cursor: default;  
+        cursor: default;
 
         &::before {
           content: "";
@@ -45,6 +66,10 @@
           left: 0;
           opacity: 0;
           transition: all 400ms ease-in-out;
+
+          @include onlyTablet {
+            top: 43px;
+          }
         }
 
         &:hover {
@@ -71,6 +96,10 @@
           background-color: getColor("LightTextActive");
           top: 49px;
           left: 0;
+
+          @include onlyTablet {
+            top: 43px;
+          }
         }
       }
     }
