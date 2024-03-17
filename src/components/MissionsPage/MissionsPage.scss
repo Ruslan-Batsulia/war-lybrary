@@ -4,6 +4,14 @@
 .missions-page {
   height: 100%;
 
+  @include onlyMobile {
+    display: none;
+  }
+
+  @include onlyTablet {
+    display: none;
+  }
+
   &__container.container {
     display: flex;
     flex-direction: column;

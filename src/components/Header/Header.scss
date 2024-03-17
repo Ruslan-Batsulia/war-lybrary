@@ -1,19 +1,9 @@
 @import "@/sass/_variables.scss";
 @import "@/sass/_mixins.scss";
 
-%link-style {
-  display: inline-block;
-  padding: 15px 10px;
-  font-size: 25px;
-
-  @include onlyTablet {
-    font-size: 20px;
-  }
-}
-
 .header {
-  background-color: getColor("BlackColorTop");
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  background-color: getColor(BlackColorTop);
+  box-shadow: 0 0 10px rgba(Black, 0.5);
 
   &__container.container {
     padding: 15px 80px;
@@ -29,13 +19,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
     height: 50px;
     width: 50px;
+
     margin-right: 60px;
 
     @include onlyTablet {
       height: 40px;
       width: 40px;
+
       margin-right: 40px;
     }
 
@@ -49,22 +42,33 @@
     align-items: center;
     gap: 20px;
 
+    width: 100%;
+
     & .list__item {
       & .default-link {
-        @extend %link-style;
+        display: inline-block;
         position: relative;
+        padding: 15px 10px;
+
+        font-size: 25px;
         transition: all 300ms linear;
         cursor: default;
+
+        @include onlyTablet {
+          font-size: 20px;
+        }
 
         &::before {
           content: "";
           position: absolute;
+
           width: 0;
           height: 2px;
-          background-color: getColor("LightTextHover");
           top: 49px;
           left: 0;
+
           opacity: 0;
+          background-color: getColor(LightTextHover);
           transition: all 400ms ease-in-out;
 
           @include onlyTablet {
@@ -72,30 +76,41 @@
           }
         }
 
-        &:hover {
-          color: getColor("LightTextHover");
-
-          &::before {
-            width: 100%;
-            opacity: 1;
+        @include desktop {
+          &:hover {
+            color: getColor(LightTextHover);
+  
+            &::before {
+              width: 100%;
+              opacity: 1;
+            }
           }
         }
       }
 
       & .active-link {
-        @extend %link-style;
+        display: inline-block;
         position: relative;
-        color: getColor("LightTextActive");
-        cursor: default;  
+        padding: 15px 10px;
+
+        font-size: 25px;
+        color: getColor(LightTextActive);
+        cursor: default;
+
+        @include onlyTablet {
+          font-size: 20px;
+        }
 
         &::before {
           content: "";
           position: absolute;
+
           width: 100%;
           height: 2px;
-          background-color: getColor("LightTextActive");
           top: 49px;
           left: 0;
+
+          background-color: getColor(LightTextActive);
 
           @include onlyTablet {
             top: 43px;
