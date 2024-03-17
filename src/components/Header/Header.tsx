@@ -7,8 +7,8 @@ import { useEffect, useState } from "react";
 import { MobileMenu, NavMenu } from "..";
 
 import library from "@/../public/icons/header/library.svg";
-import burgerMenu from "@/../public/icons/header/burger-menu-default.svg";
-import closeBurgerMenu from "@/../public/icons/header/close-burger-menu-default.svg";
+import burgerMenu from "@/../public/icons/header/burger-menu.svg";
+import closeBurgerMenu from "@/../public/icons/header/close-burger-menu.svg";
 
 import "./Header.scss";
 
