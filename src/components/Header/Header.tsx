@@ -7,16 +7,13 @@ import { useEffect, useState } from "react";
 import { MobileMenu, NavMenu } from "..";
 
 import library from "@/../public/icons/header/library.svg";
-import burgerMenuDefault from "@/../public/icons/header/burger-menu-default.svg";
-import burgerMenuFocus from "@/../public/icons/header/burger-menu-focus.svg";
-import closeBurgerMenuDefault from "@/../public/icons/header/close-burger-menu-default.svg";
-import closeBurgerMenuFocus from "@/../public/icons/header/close-burger-menu-focus.svg";
+import burgerMenu from "@/../public/icons/header/burger-menu-default.svg";
+import closeBurgerMenu from "@/../public/icons/header/close-burger-menu-default.svg";
 
 import "./Header.scss";
 
 export default function Header() {
   const [windowWidth, setWindowWidth] = useState<number>(768);
-  const [isHovered, setIsHovered] = useState<boolean>(false);
 
   const { isOpenMobileMenu, toggleMobileMenu } = useModalAndDropdown();
 
@@ -57,12 +54,10 @@ export default function Header() {
           {!isOpenMobileMenu ? (
             <button
               className="burger-menu-button"
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
               onClick={toggleMobileMenu}
             >
               <Image
-                src={!isHovered ? burgerMenuDefault : burgerMenuFocus}
+                src={burgerMenu}
                 alt="Burger menu icon"
                 width={38}
                 height={38}
@@ -71,12 +66,10 @@ export default function Header() {
           ) : (
             <button
               className="burger-menu-button"
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
               onClick={toggleMobileMenu}
             >
               <Image
-                src={!isHovered ? closeBurgerMenuDefault : closeBurgerMenuFocus}
+                src={closeBurgerMenu}
                 alt="Close burger menu icon"
                 width={38}
                 height={38}
