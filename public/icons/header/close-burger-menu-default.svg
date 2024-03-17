@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
+  <rect style="paint-order: fill; stroke-width: 0px; stroke: rgb(219, 220, 222); fill-rule: nonzero; fill: rgb(219, 220, 222); transform-origin: 20px 19px;" y="17" width="40" height="4" rx="3" ry="3" transform="matrix(0.707107007504, 0.707107007504, -0.707107007504, 0.707107007504, -1.107439306595, -0.10744483299)"/>
+  <rect style="paint-order: fill; stroke-width: 0px; stroke: rgb(219, 220, 222); fill-rule: nonzero; fill: rgb(219, 220, 222); transform-origin: 20px 29px;" y="27" width="40" height="4" rx="3" ry="3" transform="matrix(0.707107007504, -0.707107007504, 0.707107007504, 0.707107007504, -0.999986464504, -10.000012269079)"/>
+</svg>

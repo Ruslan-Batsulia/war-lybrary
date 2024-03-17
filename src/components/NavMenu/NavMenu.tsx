@@ -28,7 +28,7 @@ export default function NavMenu({
 }: NavigationMenuPropsType) {
   const {
     isOpenMobileMenu,
-    toggleMobileMenu: closeMobileMenu,
+    toggleMobileMenu,
   } = useModalAndDropdown();
 
   const path = usePathname();
@@ -43,7 +43,7 @@ export default function NavMenu({
               <li 
                 key={id}
                 className="list__item"
-                onClick={isOpenMobileMenu ? closeMobileMenu : null}
+                onClick={isOpenMobileMenu ? toggleMobileMenu : null}
               >
                 <Link href={link} className={`${
                   path === link ? "active-link" : "default-link"
