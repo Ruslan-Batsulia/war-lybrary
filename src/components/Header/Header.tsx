@@ -7,16 +7,16 @@ import library from "@/../public/icon/library.svg";
 import "./Header.scss";
 
 type NavLinkType = {
-  pathPage: string;
-  title: string;
+  link: string;
+  item: string;
   id: number;
 };
 
 const navLink: NavLinkType[] = [
-  { pathPage: "/armory", title: "Зброярня", id: 1, },
-  { pathPage: "/missions", title: "Місії", id: 2, },
-  { pathPage: "/achievements", title: "Досягнення", id: 3, },
-  { pathPage: "/season", title: "Сезон", id: 4, },
+  { link: "/armory", item: "Зброярня", id: 1, },
+  { link: "/missions", item: "Місії", id: 2, },
+  { link: "/achievements", item: "Досягнення", id: 3, },
+  { link: "/season", item: "Сезон", id: 4, },
 ];
 
 export default function Header() {
@@ -26,19 +26,19 @@ export default function Header() {
     <header className="header">
       <div className="container header__container">
         <Link href="/" className="header__icon">
-          <Image src={library} alt="library icon" height={50} />
+          <Image src={library} alt="library icon" />
         </Link>
 
         <ul className="header__list">
           {
-            navLink.map((e) => {
+            navLink.map((
+              {link, item, id}: {link: string; item: string; id: number}) => {
               return (
-                <li key={e.id} className="list__item">
-                  <Link href={e.pathPage} className={`${
-                    path === e.pathPage ?
-                    "active-link" : "default-link"
+                <li key={id} className="list__item">
+                  <Link href={link} className={`${
+                    path === link ? "active-link" : "default-link"
                   }`}>
-                    {e.title}
+                    {item}
                   </Link>
                 </li>
               )

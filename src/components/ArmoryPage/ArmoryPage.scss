@@ -1,8 +1,16 @@
-@import "./../../styles/_variables.scss";
-@import "./../../styles/_mixins.scss";
+@import "@/sass/_variables.scss";
+@import "@/sass/_mixins.scss";
 
 .armory-page {
   height: 100%;
+
+  @include onlyMobile {
+    display: none;
+  }
+
+  @include onlyTablet {
+    display: none;
+  }
 
   &__container.container {
     display: flex;

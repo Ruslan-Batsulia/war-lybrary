@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { Footer, Header } from "@/components";
+import { ModalAndDropdownProvider } from "./modalAndDropdownProvider";
 
-import "@/styles/globals.scss";
+import "@/sass/globals.scss";
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
@@ -23,9 +24,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={roboto.className}>
+        <ModalAndDropdownProvider>
         <Header />
         <main>{children}</main>
         <Footer />
+        </ModalAndDropdownProvider>
       </body>
     </html>
   );
