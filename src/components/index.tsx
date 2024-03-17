@@ -5,3 +5,5 @@ export { default as MissionsPage } from "./MissionsPage/MissionsPage";
 export { default as HomePage } from "./HomePage/HomePage";
 export { default as AchievementsPage } from "./AchievementsPage/AchievementsPage";
 export { default as SeasonPage } from "./SeasonPage/SeasonPage";
+export { default as NavMenu } from "./NavMenu/NavMenu";
+export { default as MobileMenu } from "./MobileMenu/MobileMenu";

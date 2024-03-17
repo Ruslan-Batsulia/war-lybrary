@@ -1,5 +1,5 @@
-@import "_variables.scss";
-@import "_mixins.scss";
+@import "@/sass/_variables.scss";
+@import "@/sass/_mixins.scss";
 
 * {
   box-sizing: border-box;
@@ -37,8 +37,8 @@ ul {
 
 .container {
   margin: 0 auto;
+  
   padding: 0 16px;
-
   width: 375px;
 
   @include tablet {

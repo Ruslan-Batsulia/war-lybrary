@@ -1,9 +1,17 @@
-@import "./../../styles/_variables.scss";
-@import "./../../styles/_mixins.scss";
+@import "@/sass/_variables.scss";
+@import "@/sass/_mixins.scss";
 
 .footer {
   background-color: getColor("BlackColorBottom");
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+  @include onlyMobile {
+    display: none;
+  }
+
+  @include onlyTablet {
+    display: none;
+  }
 
   &__container.container {
     padding: 25px 80px;
