@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 100 100" style="" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100" height="100" style="stroke-width: 0px; fill: rgb(76, 191, 116);" transform="matrix(0.9999999999999999, 0, 0, 0.9999999999999999, 0, 0)"/>
+  <path style="stroke-width: 0px; fill: rgb(255, 255, 255);" d="M 50 26.625 H 50 A 3.5 5 0 0 1 53.5 31.625 V 41.625 H 46.5 V 31.625 A 3.5 5 0 0 1 50 26.625 Z" transform="matrix(0.9999999999999999, 0, 0, 0.9999999999999999, 0, 0)"/>
+  <path style="stroke-width: 0px; fill: rgb(255, 255, 255);" d="M 47 43.428 H 53 A 2 2 0 0 1 55 45.428 V 69.428 H 45 V 45.428 A 2 2 0 0 1 47 43.428 Z" transform="matrix(0.9999999999999999, 0, 0, 0.9999999999999999, 0, 0)"/>
+  <rect style="stroke-width: 0px; fill: rgb(255, 255, 255);" x="45" y="70.375" width="10" height="3" transform="matrix(0.9999999999999999, 0, 0, 0.9999999999999999, 0, 0)"/>
+  <rect x="46.5" y="42.541" width="7" height="1" style="fill: rgb(255, 255, 255);" transform="matrix(0.9999999999999999, 0, 0, 0.9999999999999999, 0, 0)"/>
+</svg>
