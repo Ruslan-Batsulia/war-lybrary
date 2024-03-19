@@ -25,9 +25,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={roboto.className}>
         <ModalAndDropdownProvider>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+          <Header />
+          <main>{children}</main>
+          <Footer />
         </ModalAndDropdownProvider>
       </body>
     </html>
