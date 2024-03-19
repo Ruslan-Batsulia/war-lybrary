@@ -3,6 +3,7 @@ import { Roboto } from "next/font/google";
 import { Footer, Header } from "@/components";
 import { ModalAndDropdownProvider } from "./modalAndDropdownProvider";
 
+import Head from "next/head";
 import "@/sass/globals.scss";
 
 const roboto = Roboto({
@@ -11,10 +12,10 @@ const roboto = Roboto({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "",
-  description: "",
-};
+// export const metadata: Metadata = {
+//   title: "WarLibrary",
+//   description: "War Library",
+// };
 
 export default function RootLayout({
   children,
@@ -23,6 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="icon" href="./favicon.ico" sizes="any" />
+      </Head>
       <body className={roboto.className}>
         <ModalAndDropdownProvider>
           <Header />
