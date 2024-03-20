@@ -7,7 +7,6 @@ import { ModalAndDropdownProvider } from "./modalAndDropdownProvider";
 
 import Head from "next/head";
 import "@/sass/globals.scss";
-import { useEffect } from "react";
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
@@ -25,10 +24,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  useEffect(() => {
-    document.querySelector('main')!.style.paddingTop = `${document.querySelector('header')!.offsetHeight}px`;
-  }, []);
-
   return (
     <html lang="en">
       <Head>
