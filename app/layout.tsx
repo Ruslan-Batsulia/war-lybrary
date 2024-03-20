@@ -1,4 +1,6 @@
-import type { Metadata } from "next";
+"use client";
+
+// import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { Footer, Header } from "@/components";
 import { ModalAndDropdownProvider } from "./modalAndDropdownProvider";
