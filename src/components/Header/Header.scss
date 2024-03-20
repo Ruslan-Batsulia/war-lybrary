@@ -4,6 +4,8 @@
 .header {
   background-color: getColor(BlackColorTop);
   box-shadow: 0 0 10px rgba(Black, 0.5);
+  position: fixed;
+  width: 100vw;
 
   &__container.container {
     position: relative;
