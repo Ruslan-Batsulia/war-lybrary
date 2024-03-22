@@ -44,7 +44,6 @@
       font-size: 25px;
       text-align: center;
       border: 4px solid getColor(LightTextDefault);
-      transition: all 300ms linear;
       cursor: default;
 
       @include tablet {
@@ -58,13 +57,15 @@
       }
 
       @include desktop {
-        padding: 15px 10px;
+        padding: 25px 10px;
 
         width: fit-content;
         height: fit-content;
 
         font-size: 25px;
         border: none;
+
+        transition: 300ms;
       }
 
       &::before {
@@ -78,15 +79,15 @@
           display: block;
           content: "";
           position: absolute;
-  
+
           width: 0;
-          height: 2px;
-          top: 49px;
+          height: 3px;
+          top: 77px;
           left: 0;
-  
+
           opacity: 0;
-          background-color: getColor(LightTextHover);
-          transition: all 400ms ease-in-out;
+          background-color: transparent;
+          transition: opacity 400ms, width 400ms;
         }
       }
 
@@ -95,6 +96,7 @@
           color: getColor(LightTextHover);
 
           &::before {
+            background-color: getColor(LightTextHover);
             width: 100%;
             opacity: 1;
           }
@@ -109,12 +111,12 @@
       width: 100%;
       height: 100%;
 
-      border: 4px solid getColor(LightTextActive);
-
       font-size: 25px;
       text-align: center;
-      color: getColor(LightTextActive);
+      border: 4px solid getColor(LightTextActive);
       cursor: default;
+
+      color: getColor(LightTextActive);
 
       @include tablet {
         padding: 15px 10px;
@@ -126,7 +128,7 @@
       }
 
       @include desktop {
-        padding: 15px 10px;
+        padding: 25px 10px;
 
         width: fit-content;
         height: fit-content;
@@ -145,9 +147,9 @@
   
           width: 100%;
           height: 2px;
-          top: 43px;
+          top: 52px;
           left: 0;
-  
+
           background-color: getColor(LightTextActive);
         }
 
@@ -157,8 +159,8 @@
           position: absolute;
   
           width: 100%;
-          height: 2px;
-          top: 49px;
+          height: 3px;
+          top: 77px;
           left: 0;
   
           background-color: getColor(LightTextActive);
