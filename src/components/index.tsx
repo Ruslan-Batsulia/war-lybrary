@@ -7,3 +7,4 @@ export { default as AchievementsPage } from "./AchievementsPage/AchievementsPage
 export { default as SeasonPage } from "./SeasonPage/SeasonPage";
 export { default as NavMenu } from "./NavMenu/NavMenu";
 export { default as MobileMenu } from "./MobileMenu/MobileMenu";
+export { default as MissionCard } from "./MissionCard/MissionCard";
